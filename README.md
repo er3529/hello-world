@@ -57,3 +57,30 @@ public class Dice
 		return faceValue;
 	}
 }
+
+
+
+
+
+
+public class SnakeEyes 
+{
+    public static void main(String[]args) 
+    {
+    	int boxCars = 0;
+    	final int rolls = 1000;
+    	Dice dice1 = new Dice();
+    	Dice dice2 = new Dice();
+		
+		for(int roll = 1; roll <= rolls; roll++)
+		{
+			int num1 = dice1.roll();
+			int num2 = dice2.roll();
+			
+		if (num1 == 6 && num2 == 6)
+			boxCars++;
+		}
+		System.out.println ("Number of rolls: " + rolls);
+		System.out.println ("Number of BoxCars in total(two sixes that occured): " + boxCars);
+    }
+}
